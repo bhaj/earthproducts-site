@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Earth Products - let me find your lentil</title>
+  <meta name="description" content="page not found. let me find your lentil.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- absolute paths: this page is served for arbitrary deep URLs -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <style>
+    /* 404-only styles, scoped so the shared stylesheet stays untouched */
+    /* the legacy wrapper is a fixed 100vh with internal scroll, so the
+       vertical rhythm is tightened to keep the link above the fold */
+    .notfound header {
+      height: 30vh;
+    }
+
+    /* the shared logo rule has no background-size, so a shorter header
+       crops the mark. scale it to fit instead. */
+    .notfound header .logo {
+      background-size: contain;
+    }
+
+    .notfound #main {
+      text-align: center;
+      margin: 2vh 0;
+    }
+
+    .notfound #main p {
+      margin: 3vh 15%;
+    }
+
+    .notfound .line {
+      margin: 4vh auto;
+    }
+
+    .notfound #main .code {
+      font-size: 1.1em;
+      letter-spacing: 0.4em;
+      text-indent: 0;
+      margin: 0 15% 2vh;
+      color: var(--colour-6);
+      text-transform: uppercase;
+    }
+
+    .notfound #main h1 {
+      margin-top: 2vh;
+      line-height: 1.25;
+    }
+
+    .notfound #main p {
+      text-indent: 0;
+      text-align: center;
+    }
+
+    .notfound #main .home {
+      font-size: 1.4em;
+    }
+
+    .notfound #main a {
+      color: var(--colour-6);
+      text-decoration: none;
+      border-bottom: 2px solid var(--colour-7);
+      padding-bottom: 2px;
+    }
+
+    .notfound #main a:hover,
+    .notfound #main a:focus {
+      color: var(--colour-7);
+    }
+
+    /* the lentil: a flat split-lentil disc in the brand's burnt orange */
+    .lentil {
+      width: 66px;
+      height: 44px;
+      margin: 3vh auto 0;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at 50% 45%, #e07a45 0%, var(--colour-6) 62%, #ad5028 100%);
+      box-shadow: inset 0 0 0 3px rgba(140, 62, 30, 0.35);
+      animation: roll 4.5s ease-in-out infinite;
+    }
+
+    @keyframes roll {
+      0%, 100% { transform: translateX(-26px) rotate(-14deg); }
+      50%      { transform: translateX(26px) rotate(14deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lentil { animation: none; }
+    }
+
+    /* The shared styles set body copy at 1.8em, which is oversized on a
+       phone. Scoped to this page only, so index.html is untouched. */
+    @media only screen and (max-width: 640px) {
+      .notfound header {
+        height: 20vh;
+      }
+
+      .notfound #main h1 {
+        font-size: 1.5em;
+      }
+
+      .notfound #main p {
+        font-size: 1.15em;
+        margin: 3vh 7%;
+      }
+
+      .notfound #main .code {
+        font-size: 0.85em;
+        letter-spacing: 0.25em;
+        margin: 0 7% 2vh;
+      }
+
+      .notfound #main .home {
+        font-size: 1.1em;
+      }
+
+      .notfound .line {
+        width: 80%;
+      }
+
+      .lentil {
+        width: 54px;
+        height: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body class="notfound">
+
+<div id="wrapper">
+	<div id="container">
+		<header>
+
+	<div class="logo"></div>
+
+	<div class="menu"></div>
+
+</header>
+
+		<div id="main">
+
+<p class="code">Page not found</p>
+
+<h1>Let me find your lentil</h1>
+
+<div class="lentil"></div>
+
+<p>
+It rolled off somewhere. The page you were after has either been folded into the front page, or it went back to the soil.
+</p>
+
+<div class="line"></div>
+
+<p class="home">
+<a href="/">Back to the front page</a>
+</p>
+
+<p class="home">
+Or write to us at <a href="mailto:info@earthproducts.co.za">info@earthproducts.co.za</a>
+</p>
+
+		</div>
+		<footer>
+
+<div class="line"></div>
+
+<div class="content">
+<p>footer things</p>
+</div>
+
+</footer>
+
+	</div>
+</div>
+
+</body>
+
+</html>
